@@ -14,14 +14,37 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-page-background: #0f172a;
-    --color-card-surface: #1e293b;
-    --color-border-line: #334155;
+    --color-page-background: #242629;
+    --color-card-surface: #303236;
+    --color-border-line: #1f2023;
 
-    --color-text-primary: #f8fafc;
-    --color-text-secondary: #94a3b8;
+    --color-text-primary: #dbdee1;
+    --color-text-secondary: #949ba4;
 
-    --color-brand-primary: #60a5fa;
-    --color-brand-primary-hover: #3b82f6;
+    --color-brand-primary: #5865f2;        
+    --color-brand-primary-hover: #4752c4;  
   }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-variable.woff2') format('woff2 supports variations'),
+       url('/fonts/inter-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/archivo-variable.woff2') format('woff2 supports variations'),
+       url('/fonts/archivo-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text-primary);
+  background-color: var(--color-page-background);
+  font-family: Inter, Arial, Helvetica, sans-serif;
 }
