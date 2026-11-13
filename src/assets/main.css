@@ -1,43 +1,56 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-page-background: #ffffff;
-  --color-card-surface: #f8fafc;
-  --color-border-line: #e2e8f0;
+  --color-page-background: #f8fafc;
+  --color-card-surface: #ffffff;
+  --color-border-line: rgba(0, 0, 0, 0.04);
 
   --color-text-primary: #0f172a;
   --color-text-secondary: #64748b;
 
-  --color-brand-primary: #3b82f6;
-  --color-brand-primary-hover: #2563eb;
+  --color-brand-primary: #334155;
+  --color-brand-primary-hover: #1e293b;
+
+  --shadow-card: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 10px 25px -3px rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-page-background: #242629;
-    --color-card-surface: #303236;
-    --color-border-line: #1f2023;
+[data-theme='dark'] {
+  --color-page-background: #131215;
+  --color-card-surface: #1a191e;
+  --color-border-line: rgba(255, 255, 255, 0.02);
 
-    --color-text-primary: #dbdee1;
-    --color-text-secondary: #949ba4;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
 
-    --color-brand-primary: #5865f2;        
-    --color-brand-primary-hover: #4752c4;  
-  }
+  --color-brand-primary: #25242c;
+  --color-brand-primary-hover: #32303b;
+
+  --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 20px 40px -10px rgba(0, 0, 0, 0.7);
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('/fonts/inter-variable.woff2') format('woff2 supports variations'),
-       url('/fonts/inter-variable.woff2') format('woff2');
+  src:
+    url('/fonts/inter-variable.woff2') format('woff2 supports variations'),
+    url('/fonts/inter-variable.woff2') format('woff2');
   font-weight: 100 900;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Archivo';
-  src: url('/fonts/archivo-variable.woff2') format('woff2 supports variations'),
-       url('/fonts/archivo-variable.woff2') format('woff2');
+  src:
+    url('/fonts/archivo-variable.woff2') format('woff2 supports variations'),
+    url('/fonts/archivo-variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src:
+    url('/fonts/geist-variable.woff2') format('woff2 supports variations'),
+    url('/fonts/geist-variable.woff2') format('woff2');
   font-weight: 100 900;
   font-display: swap;
 }
@@ -46,5 +59,7 @@ body {
   margin: 0;
   color: var(--color-text-primary);
   background-color: var(--color-page-background);
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: Geist, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
